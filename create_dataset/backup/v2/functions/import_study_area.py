@@ -31,6 +31,9 @@ def import_study_area(study_area:dict, project_crs:osr.SpatialReference) -> dict
 
     study_area["geom"] = study_area_geom
     study_area["crs"] = study_area_crs
-    study_area["x_left"],study_area["x_right"],study_area["y_lower"],study_area["y_upper"] = study_area_geom.GetEnvelope()
+    study_area["x_left"], \
+    study_area["x_right"], \
+    study_area["y_lower"], \
+    study_area["y_upper"] = study_area_geom.GetEnvelope()
 
     return study_area
